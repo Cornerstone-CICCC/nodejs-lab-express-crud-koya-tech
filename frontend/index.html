@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Manager</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .section {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .employee-item {
+            border: 1px solid #ccc;
+            padding: 8px;
+            margin-bottom: 5px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+
+        form>input,
+        form>label,
+        form>button {
+            display: block;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Employee</h1>
+
+    <div class="section">
+        <h2>Search Employees</h2>
+        <input type="text" id="searchInput" placeholder="Search by firstname">
+        <button id="btnSearch">Search</button>
+        <div id="searchResults"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Employee List</h2>
+            <div id="employeeList"></div>
+        </div>
+
+        <div class="section">
+            <h2>Employee Details</h2>
+            <div id="employeeDetails"></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Add Employee</h2>
+        <form id="addEmployeeForm">
+            <input type="text" id="addFirstname" placeholder="Firstname" required>
+            <input type="text" id="addLastname" placeholder="Lastname" required>
+            <input type="number" id="addAge" placeholder="Age" required>
+            <label>
+                <input type="checkbox" id="addIsMarried">
+                Married
+            </label>
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+
+    <div class="section">
+        <h2>Edit Employee</h2>
+        <form id="editEmployeeForm">
+            <input type="hidden" id="editId">
+            <input type="text" id="editFirstname" placeholder="Firstname" required>
+            <input type="text" id="editLastname" placeholder="Lastname" required>
+            <input type="number" id="editAge" placeholder="Age" required>
+            <label>
+                <input type="checkbox" id="editIsMarried">
+                Married
+            </label>
+            <button type="submit">Update Employee</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
